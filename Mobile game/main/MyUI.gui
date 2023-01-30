@@ -3,6 +3,10 @@ fonts {
   name: "system_font"
   font: "/builtins/fonts/system_font.font"
 }
+fonts {
+  name: "Pixel art font"
+  font: "/assets/Nueva carpeta/Pixel art font.font"
+}
 background_color {
   x: 0.0
   y: 0.0
@@ -42,8 +46,8 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "PIMIENTA DE MI CORAZ\303\223N"
-  font: "system_font"
+  text: "100"
+  font: "Pixel art font"
   id: "text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE

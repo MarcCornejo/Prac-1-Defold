@@ -1,4 +1,7 @@
+
+
 function init(self)
+	gui.set_text(gui.get_node("text"),"0")
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
@@ -11,15 +14,18 @@ function final(self)
 end
 
 function update(self, dt)
-	-- Add update code here
+	-- Add update code here6
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
+	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+	
+	if message_id == hash("update_Score") then
+		gui.set_text(gui.get_node("text"),message.score)
+	end
+	
 end
 
 function on_input(self, action_id, action)
