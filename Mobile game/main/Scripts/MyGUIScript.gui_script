@@ -20,8 +20,6 @@ function update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-	
 	if message_id == hash("update_Score") then
 		gui.set_text(gui.get_node("text"),message.score)
 	end

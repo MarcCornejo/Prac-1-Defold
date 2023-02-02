@@ -62,15 +62,14 @@ function on_input(self, action_id, action)
 	if not action_id or action_id == hash("touch") then
 		if action.pressed then
 			msg.post("#collisionobject", "enable")
-			print("Clicked")
 			self.Score= self.Score+1
+			sound.play("#Rabbit_Click", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
 			msg.post("/Text#MyUI", "update_Score", {score=tostring(self.Score)})
 			sprite.play_flipbook(SPRITE, ANIM_CLICK)
 			self.pressed = true
 
 		elseif action.released then
 			msg.post("#collisionobject", "disable")
-			print("Released")
 			sprite.play_flipbook(SPRITE, ANIM_IDLE)
 			self.pressed = false
 		end
