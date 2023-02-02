@@ -64,7 +64,7 @@ function on_input(self, action_id, action)
 			msg.post("#collisionobject", "enable")
 			print("Clicked")
 			self.Score= self.Score+1
-			msg.post("/main/MyUI.gui", "update_Score", {score=tostring(self.Score)})
+			msg.post("/Text#MyUI", "update_Score", {score=tostring(self.Score)})
 			sprite.play_flipbook(SPRITE, ANIM_CLICK)
 			self.pressed = true
 

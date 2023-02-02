@@ -5,7 +5,7 @@ fonts {
 }
 fonts {
   name: "Pixel art font"
-  font: "/assets/Nueva carpeta/Pixel art font.font"
+  font: "/assets/Fonts/Pixel art font.font"
 }
 background_color {
   x: 0.0
