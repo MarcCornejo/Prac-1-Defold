@@ -1,8 +1,10 @@
 images {
   image: "/assets/app_icons/icon_180.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/background.png"
+  image: "/assets/Sprites/background.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0
 extrude_borders: 2

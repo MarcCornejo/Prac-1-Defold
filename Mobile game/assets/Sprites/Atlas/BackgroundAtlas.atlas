@@ -1,5 +1,5 @@
 images {
-  image: "/main/ssssssssssssss.png"
+  image: "/assets/Sprites/Sprite_background.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0

@@ -25,8 +25,8 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/main/bg.atlas\\\"\\n"
-  "default_animation: \\\"ssssssssssssss\\\"\\n"
+  "  data: \"tile_set: \\\"/assets/Sprites/Atlas/BackgroundAtlas.atlas\\\"\\n"
+  "default_animation: \\\"Sprite_background\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
@@ -40,6 +40,11 @@ embedded_instances {
   "    y: 0.0\n"
   "    z: 0.0\n"
   "    w: 1.0\n"
+  "  }\n"
+  "  scale {\n"
+  "    x: 0.9\n"
+  "    y: 0.9\n"
+  "    z: 1.0\n"
   "  }\n"
   "}\n"
   ""
@@ -55,8 +60,8 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 1.0
-    y: 1.0
+    x: 1.5
+    y: 1.5
     z: 1.0
   }
 }
