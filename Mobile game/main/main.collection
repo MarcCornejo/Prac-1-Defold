@@ -103,10 +103,10 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "SoundController"
+  id: "BackgroundSoundController"
   data: "components {\n"
   "  id: \"SoundControllerScript\"\n"
-  "  component: \"/main/Scripts/SoundControllerScript.script\"\n"
+  "  component: \"/main/Scripts/BackgroundSoundController_Script.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
@@ -124,13 +124,68 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sound\"\n"
   "  type: \"sound\"\n"
-  "  data: \"sound: \\\"/assets/Sounds/624874__sonically_sound__retro-funk-20032022-1714.wav\\\"\\n"
+  "  data: \"sound: \\\"/assets/Sounds/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.wav\\\"\\n"
   "looping: 1\\n"
   "group: \\\"master\\\"\\n"
   "gain: 1.0\\n"
   "pan: 0.0\\n"
   "speed: 1.0\\n"
-  "loopcount: 400\\n"
+  "loopcount: 0\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "CarrotFactory"
+  data: "components {\n"
+  "  id: \"CarrotSpawner_Script\"\n"
+  "  component: \"/main/Scripts/CarrotSpawner_Script.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  property_decls {\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"factory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/Carrot_Prototype.go\\\"\\n"
+  "load_dynamically: false\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"

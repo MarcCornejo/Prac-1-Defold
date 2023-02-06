@@ -1,0 +1,17 @@
+local lastClickTime
+local cooldown=3
+function init(self)
+	sound.play("#sound", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
+	lastClickTime=os.time()
+	
+end
+
+function update(self, dt)
+	if(lastClickTime+cooldown<=os.time()) then
+		msg.post("/Player/Conejo#conejoScript", "carrot_Click")
+		print("Carrot click")
+		lastClickTime=os.time()
+	end
+end
+
+

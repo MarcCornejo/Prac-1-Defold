@@ -1,6 +1,6 @@
 components {
   id: "conejoScript"
-  component: "/main/Scripts/conejoScript.script"
+  component: "/main/Scripts/Conejo_Script.script"
   position {
     x: 0.0
     y: 0.0
@@ -81,8 +81,8 @@ embedded_components {
     w: 1.0
   }
   scale {
-    x: 0.75
-    y: 0.75
+    x: 0.5
+    y: 0.5
     z: 1.0
   }
 }

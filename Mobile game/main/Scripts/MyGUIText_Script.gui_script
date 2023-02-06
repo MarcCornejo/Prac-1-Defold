@@ -1,0 +1,16 @@
+local pienode
+
+function init(self)
+	gui.set_text(gui.get_node("text"),"0")
+	pienode = gui.get_node("pie")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("update_Score") then
+		gui.set_text(gui.get_node("text"),message.score)
+		-- get the outer bounds
+		--local fill_angle = gui.get_fill_angle(pienode)
+		gui.set_fill_angle(pienode, tonumber(message.score)%10*36)
+	end
+	
+end
