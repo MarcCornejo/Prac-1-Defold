@@ -39,18 +39,27 @@ function on_input(self, action_id, action)
 	
 	if not action_id or action_id == hash("touch") then
 		if action.pressed then
-			msg.post("#collisionobject", "enable")
-			self.Score= self.Score+1
-			sound.play("#Rabbit_Click", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
-			msg.post("/Text#MyUI", "update_Score", {score=tostring(self.Score)})
-			sprite.play_flipbook(SPRITE, ANIM_CLICK)
-			self.pressed = true
+			local conejoPos = go.get_world_position("Conejo")
+			local mouseX = action.x
+			local mouseY = action.y
+			local limiteDerecho = conejoPos.x - 150
+			local limiteIzquierdo = conejoPos.x + 150
+			local limiteSuperior = conejoPos.y + 100
+			local limiteInferior = conejoPos.y - 100
 			
-			--spawn carrot
-			if(self.Score%10==0) then
-				msg.post("/CarrotFactory#CarrotSpawner_Script", "spawn_carrot")
+			if mouseX >= limiteDerecho and mouseX <= limiteIzquierdo and mouseY >= limiteInferior and mouseY <= limiteSuperior then
+				msg.post("#collisionobject", "enable")
+				self.Score= self.Score+1
+				sound.play("#Rabbit_Click", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
+				msg.post("/Text#MyUI", "update_Score", {score=tostring(self.Score)})
+				sprite.play_flipbook(SPRITE, ANIM_CLICK)
+				self.pressed = true
+				
+				--spawn carrot
+				if(self.Score%10==0) then
+					msg.post("/CarrotFactory#CarrotSpawner_Script", "spawn_carrot")
+				end
 			end
-			
 		elseif action.released then
 			msg.post("#collisionobject", "disable")
 			sprite.play_flipbook(SPRITE, ANIM_IDLE)
