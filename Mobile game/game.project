@@ -45,3 +45,12 @@ shared_state = 1
 gravity_y = -1000.0
 scale = 0.01
 
+[sound]
+max_sound_buffers = 1024
+max_component_count = 1024
+max_sound_instances = 1024
+max_sound_data = 1024
+
+[sprite]
+max_count = 1024
+

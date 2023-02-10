@@ -8,8 +8,8 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("spawn_carrot") then
-		local x1 = math.random(20, gameWidth-20)
-		local y1 = math.random(20, gameHeight-20)
+		local x1 = math.random(20, gameWidth+150)
+		local y1 = math.random(20, gameHeight-200)
 		local pos = vmath.vector3(x1,y1,1)
 		factory.create("#factory", pos, nil, {}, 1)
 end
