@@ -1,16 +1,17 @@
-local lastClickTime
+go.property("name", 0)  
+local lastClickTime = 0
 local cooldown=3
 function init(self)
 	sound.play("#sound", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
 	lastClickTime=os.time()
-	
 end
 
 function update(self, dt)
 	if(lastClickTime+cooldown<=os.time()) then
-		msg.post("/Player/Conejo#conejoScript", "carrot_Click")
+		msg.post("/Player/Conejo#conejoScript", "carrot_Click", {counterC = 1})
 		print("Carrot click")
 		lastClickTime=os.time()
+		print(lastClickTime)
 	end
 end
 
