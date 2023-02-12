@@ -1,5 +1,5 @@
 function init(self)
-	sound.play("/BackgroundSoundController", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
+	sound.play("/BackgroundSoundController", {delay = 0, gain = 0.5, pan = -1.0, speed = 1.25})
 	
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/

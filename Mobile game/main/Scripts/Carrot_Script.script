@@ -2,7 +2,7 @@ go.property("name", 0)
 local lastClickTime = 0
 local cooldown=3
 function init(self)
-	sound.play("#sound", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
+	sound.play("#sound", {delay = 0, gain = 0.5, pan = -1.0, speed = 1.25})
 	lastClickTime=os.time()
 end
 
